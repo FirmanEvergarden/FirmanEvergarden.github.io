@@ -19,16 +19,19 @@ header {
     z-index: 1000; /* Agar elemen ini berada di atas konten lainnya */
     background-color: #ff6f61;
     text-align: center;
-    padding: 30px 30px;
+    padding: 12px 12px;
     color: #fff;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-header h1 {
+header h2 {
     margin: 0;
-    font-size: 2.5rem;
-    font-weight: 600;
-    letter-spacing: 2px;
+    font-size: 1.5rem; /* Ubah ukuran font sesuai dengan sidebar-title */
+    font-weight: bold; /* Buat teks menjadi tebal */
+    letter-spacing: 1px; /* Sedikit jarak antar huruf untuk estetika */
+    font-family: 'Poppins', sans-serif; /* Font estetik */
+    color: #fff; /* Warna putih */
+    text-align: center; /* Tengah */
 }
 
 header p {
