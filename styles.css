@@ -1,0 +1,366 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff;
+    color: #333;
+}
+body {
+    margin-top: 90px; /* Sesuaikan dengan tinggi header */
+}
+
+header {
+    position: fixed; /* Tetap di tempat saat scroll */
+    top: 0; /* Letakkan di atas layar */
+    left: 0;
+    width: 100%; /* Lebar penuh */
+    z-index: 1000; /* Agar elemen ini berada di atas konten lainnya */
+    background-color: #ff6f61;
+    text-align: center;
+    padding: 30px 30px;
+    color: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+    font-weight: 600;
+    letter-spacing: 2px;
+}
+
+header p {
+    margin: 10px 0 0;
+    font-size: 1rem;
+}
+
+.price-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    padding: 40px 20px;
+}
+
+.price-item {
+    background-color: #ffe9e6;
+    border: 2px solid #ff6f61;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+}
+
+.price-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.price-item h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #ff6f61;
+}
+
+.price-item p {
+    font-size: 1rem;
+    margin: 5px 0;
+    color: #333;
+}
+
+.description {
+    display: none;
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 15px;
+    margin-top: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 0.3s ease forwards;
+}
+
+.description.active {
+    display: block;
+}
+
+.order-btn {
+    background-color: #ff6f61;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.order-btn:hover {
+    background-color: #e05650;
+}
+
+.separator {
+    text-align: center;
+    margin: 40px 0 20px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #ff6f61;
+}
+
+.navigate-buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    margin: 30px 0;
+}
+
+.navigate-item {
+    width: 250px;
+    padding: 20px;
+    background-color: #ffe9e6;
+    border: 2px solid #ff6f61;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+}
+
+.navigate-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.navigate-item h3 {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #ff6f61;
+    margin: 0;
+}
+
+.navigate-item p {
+    font-size: 0.9rem;
+    margin: 10px 0 0;
+    color: #333;
+    display: none;
+    animation: fadeIn 0.3s ease forwards;
+}
+
+.navigate-item.active p {
+    display: block;
+}
+
+.navigate-item button {
+    display: none;
+    background-color: #ff6f61;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    font-size: 0.9rem;
+    border-radius: 5px;
+    margin-top: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.navigate-item.active button {
+    display: inline-block;
+}
+
+.navigate-item button:hover {
+    background-color: #e05650;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #f5f5f5;
+    font-size: 0.9rem;
+}
+
+.back-btn {
+    background-color: #f5f5f5;
+    color: #333;
+    border: none;
+    padding: 12px 20px;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
+    text-align: center;
+    display: inline-block;
+}
+
+.back-btn:hover {
+    background-color: #e05650;
+}
+
+.promo-text {
+    font-size: 1.4em;
+    line-height: 1.8;
+    color: #333;
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    font-family: 'Roboto', sans-serif;
+    animation: burn-in 2.5s ease-out 1s forwards;
+    white-space: normal;
+    overflow: hidden;
+    display: inline-block;
+    word-wrap: break-word;
+    max-width: 100%;
+    border: 3px solid transparent;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+@keyframes burn-in {
+    0% {
+        opacity: 0;
+        text-shadow: 0 0 10px rgba(0, 0, 0, 0.6), 0 0 20px rgba(0, 0, 0, 0.3);
+    }
+    100% {
+        opacity: 1;
+        text-shadow: none;
+    }
+}
+
+.promo-text strong {
+    color: #e05650;
+    font-weight: bold;
+}
+
+.promo-text .highlight {
+    color: #FF6347;
+    font-weight: bold;
+    font-style: italic;
+}
+
+img {
+    width: 80%;
+    max-width: 80%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+/* Tombol Sidebar dengan animasi garis */
+.sidebar-toggle {
+    position: fixed; /* Tetap terlihat di layar saat scroll */
+    top: 5px; /* Posisikan tombol lebih ke atas */
+    left: 20px;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 6px;
+    cursor: pointer;
+    z-index: 1100; /* Tombol berada di atas sidebar */
+    background: none;
+    border: none;
+    outline: none;
+}
+
+.sidebar-toggle span {
+    display: block;
+    width: 35px;
+    height: 4px;
+    background-color: #fff; /* Warna garis diubah menjadi putih */
+    border-radius: 2px;
+    transition: transform 0.3s ease, opacity 0.3s ease, background-color 0.3s ease;
+}
+
+.sidebar-toggle.active span:nth-child(1) {
+    transform: translateY(10px) rotate(45deg); /* Animasi garis pertama */
+}
+
+.sidebar-toggle.active span:nth-child(2) {
+    opacity: 0; /* Garis tengah menghilang */
+}
+
+.sidebar-toggle.active span:nth-child(3) {
+    transform: translateY(-10px) rotate(-45deg); /* Animasi garis ketiga */
+}
+
+/* Sidebar */
+.sidebar {
+    position: fixed; /* Tetap berada di posisi kiri dan tidak bergeser */
+    top: 0;
+    left: -250px; /* Sidebar tersembunyi di luar layar */
+    width: 250px;
+    height: 100%;
+    background-color: #222;
+    color: #fff;
+    padding-top: 50px;
+    transition: left 0.3s ease;
+    z-index: 1000; /* Sidebar berada di bawah tombol */
+    overflow-y: auto; /* Sidebar tetap scrollable */
+}
+
+.sidebar.active {
+    left: 0; /* Sidebar muncul */
+}
+
+.sidebar .brand {
+    padding: 1rem;
+    text-align: center;
+    border-bottom: 1px solid #444;
+}
+
+.sidebar .brand h3 {
+    margin: 0;
+    font-size: 1.5rem;
+}
+
+/* List Sidebar */
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar ul li {
+    margin: 0.5rem 0;
+}
+
+.sidebar ul li a {
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+    text-decoration: none;
+    color: #fff;
+    font-size: 1rem;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.sidebar ul li a:hover {
+    background-color: #444;
+}
+
+.sidebar ul li a i {
+    margin-right: 10px;
+}
+
+
+.sidebar.active + .sidebar-title {
+    z-index: 900; /* Title berada di bawah sidebar saat sidebar aktif */
+}

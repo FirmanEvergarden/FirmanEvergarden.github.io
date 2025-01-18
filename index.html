@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Price List</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="hero-header">
+        <div class="overlay"></div>
+    </header>
+    <section class="promo">
+        <div class="logo-container">
+            <img src="https://raw.githubusercontent.com/FirmanEvergarden/file/refs/heads/main/quality_restoration_20250118011858330.png" alt="Firman Evergarden Shop Logo" class="logo">
+        </div>
+        <p class="promo-text"><strong>Butuh bantuan untuk menaklukkan tantangan di dunia Genshin Impact?</strong> Percayakan pada Firman Evergarden Shop! Kami menawarkan layanan joki terbaik yang siap membantu Anda mencapai tujuan dalam permainan dengan cepat dan efisien.</p>
+    </section>
+
+    <div class="separator">
+        Daftar Layanan Joki
+    </div>
+
+    <div class="navigate-buttons">
+        <div class="navigate-item" onclick="toggleNavigation(this)">
+            <h3>Joki Explor</h3>
+            <p>Jasa joki untuk eksplorasi map dan penyelesaian chest 100%.</p>
+            <button onclick="window.location.href='joki_explor.html'">Lihat</button>
+        </div>
+        <div class="navigate-item" onclick="toggleNavigation(this)">
+            <h3>Joki Ascend</h3>
+            <p>Jasa joki untuk ascend karakter dan senjata Anda.</p>
+            <button onclick="window.location.href='joki_ascend.html'">Lihat</button>
+        </div>
+        <div class="navigate-item" onclick="toggleNavigation(this)">
+            <h3>Joki Culus</h3>
+            <p>Jasa joki untuk mencari dan menyelesaikan oculi di map.</p>
+            <button onclick="window.location.href='joki_culus.html'">Lihat</button>
+        </div>
+        <div class="navigate-item" onclick="toggleNavigation(this)">
+            <h3>Joki Spiral Abyss</h3>
+            <p>Jasa joki untuk menyelesaikan Spiral Abyss secara efisien.</p>
+            <button onclick="window.location.href='joki_spiral.html'">Lihat</button>
+        </div>
+        <div class="navigate-item" onclick="toggleNavigation(this)">
+            <h3>Joki Quest</h3>
+            <p>Jasa joki untuk menyelesaikan semua jenis quest.</p>
+            <button onclick="window.location.href='joki_quest.html'">Lihat</button>
+        </div>
+        <div class="navigate-item" onclick="toggleNavigation(this)">
+            <h3>Joki Material</h3>
+            <p>Jasa joki untuk farming material yang Anda butuhkan.</p>
+            <button onclick="window.location.href='joki_material.html'">Lihat</button>
+        </div>
+        <div class="navigate-item" onclick="toggleNavigation(this)">
+            <h3>Rawat Akun</h3>
+            <p>Jasa joki untuk farming material yang Anda butuhkan.</p>
+            <button onclick="window.location.href='joki_rawat.html'">Lihat</button>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Firman Evergarden</p>
+    </footer>
+
+   <div class="sidebar-title">Mann Shop</div>
+<button class="sidebar-toggle">
+    <span></span>
+    <span></span>
+    <span></span>
+</button>
+
+<div class="sidebar">
+    <div class="brand">
+        <h3>Joki Impact</h3>
+    </div>
+    <ul>
+        <li><a href="joki_explor.html"><i class="fa fa-map"></i> Joki Explor</a></li>
+        <li><a href="joki_quest.html"><i class="fa fa-question-circle"></i> Joki Quest</a></li>
+        <li><a href="joki_ascend.html"><i class="fa fa-level-up-alt"></i> Joki Ascend</a></li>
+        <li><a href="joki_culus.html"><i class="fa fa-eye"></i> Joki Culus</a></li>
+        <li><a href="joki_spiral.html"><i class="fa fa-cogs"></i> Spiral Abyss</a></li>
+        <li><a href="joki_rawat.html"><i class="fa fa-cogs"></i> Rawat Akun</a></li>
+    </ul>
+</div>
+
+    <script>
+        function toggleDescription(selectedItem) {
+            const allDescriptions = document.querySelectorAll('.price-item .description');
+            allDescriptions.forEach((desc) => {
+                if (desc !== selectedItem.querySelector('.description')) {
+                    desc.classList.remove('active');
+                }
+            });
+
+            const description = selectedItem.querySelector('.description');
+            description.classList.toggle('active');
+        }
+
+        function toggleNavigation(selectedItem) {
+            const allItems = document.querySelectorAll('.navigate-item');
+            allItems.forEach((item) => {
+                if (item !== selectedItem) {
+                    item.classList.remove('active');
+                }
+            });
+
+            selectedItem.classList.toggle('active');
+        }
+    const sidebarToggle = document.querySelector('.sidebar-toggle');
+    const sidebar = document.querySelector('.sidebar');
+
+    sidebarToggle.addEventListener('click', () => {
+        sidebar.classList.toggle('active');
+        sidebarToggle.classList.toggle('active');
+    });
+    </script>
+</body>
+</html>
